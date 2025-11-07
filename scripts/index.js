@@ -48,10 +48,10 @@ const getEvents = function () {
           product.price +
           " €</p>" +
           "</div>" +
-          '<div class="card-footer text-center">' +
+          '<div class="card-footer text-center bg-black">' +
           '<a href="./backoffice.html?productId=' +
           product._id +
-          '" class="btn btn-warning">Modifica</a>' +
+          '" class="btn " style="background-color: rgb(70, 135, 214)">Modifica </a>' +
           "</div>" +
           "</div>" +
           "</div>";

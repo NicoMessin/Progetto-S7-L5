@@ -88,3 +88,26 @@ if (id) {
   }) })
 
 
+const deleteBtn = document.getElementById("delete-btn");
+
+deleteBtn.addEventListener("click", function () {
+ 
+
+  
+
+  fetch(eventsURL + "/" + id, {
+    method: "DELETE",
+    headers: { Authorization: token },
+  })
+    .then((res) => {
+      if (!res.ok) throw new Error("Errore nella cancellazione: " + res.status);
+      alert("Prodotto eliminato correttamente");
+
+    
+      const card = document.querySelector(".card");
+      if (card) card.remove();
+
+      
+    })
+    .catch((err) => console.log("Errore nel DELETE:", err));
+});
